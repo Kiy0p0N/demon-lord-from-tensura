@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    font-family: fantasy;
+    color: #fff;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.content{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    margin: auto;
+}
+
+.text{
+    width: 40%;
+    height: 100%;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.images{
+    width: 60%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+}
+
+img{
+    width: 250px;
+    box-shadow: 1em 0.5em 1em #000;
+}
+
+.img1{
+    grid-column: -1/-4;
+    grid-row: 3/9;
+
+}
+
+.img2{
+    grid-column: -2/-6;
+    grid-row: 5/9;
+
+    
+}
+
+.img3{
+    grid-column: -5/-8;
+    grid-row: 2/4;
+}
+
+footer{
+    background-color: #000;
+    width: 100%;
+    height: 10%;
+    display: flex;
+}
+
+button{
+    width: 12.5%;
+    height: 100%;
+    border: 0;
+    background: none;
+    transition: 1s;
+}
+
+.active{
+    display: block;
+}
+
+.disabled{
+    display: none;     
+}
+
+.maou{
+    width: 100%;
+    height: 90%;
+}
+
+.rimuru{
+    background-color: #1A79D1;
+}
+
+#rimuru:hover{
+    background-color: #1A79D1;
+}
+
+.milim{
+    background-color: #ec04aa;
+}
+
+#milim:hover{
+    background-color: #ec04aa;
+}
+
+.guy{
+    background-color: #ff0000;
+}
+
+#guy:hover{
+    background-color: #ff0000;
+}
+
+.ramiris{
+    background-color: #bb9f00;
+}
+
+#ramiris:hover{
+    background-color: #bb9f00;
+}
+
+.valentine{
+    background-color: #7f7f7f;
+}
+
+#valentine:hover{
+    background-color: #7f7f7f;
+}
+
+.leon{
+    background-color: #e0c900;
+}
+
+#leon:hover{
+    background-color: #e0c900;
+}
+
+.dagruel{
+    background-color: #000539;
+}
+
+#dagruel:hover{
+    background-color: #000539;
+}
+
+.dino{
+    background-color: #009dff;
+}
+
+#dino:hover{
+    background-color: #009dff;
+}
