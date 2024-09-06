@@ -25,48 +25,65 @@ $(document).ready(()=>{
         disabled()
 
         rimuru.removeClass('disabled').addClass('active')
+
+        $('body').css('background-color', '#1A79D1')
+        
     })
 
     $('#milim').click(()=>{
         disabled()
 
         milim.removeClass('disabled').addClass('active')
+
+        $('body').css('background-color', '#ec04aa')
     })
 
     $('#guy').click(()=>{
         disabled()
 
         guy.removeClass('disabled').addClass('active')
+
+        $('body').css('background-color', '#ff0000')
     })
 
     $('#ramiris').click(()=>{
         disabled()
 
         ramiris.removeClass('disabled').addClass('active')
+
+        $('body').css('background-color', '#bb9f00')
     })
 
     $('#valentine').click(()=>{
         disabled()
 
         valentine.removeClass('disabled').addClass('active')
+
+        $('body').css('background-color', '#7f7f7f')
     })
 
     $('#leon').click(()=>{
         disabled()
 
         leon.removeClass('disabled').addClass('active')
+
+        $('body').css('background-color', '#e0c900')
     })
 
     $('#dagruel').click(()=>{
         disabled()
 
         dagruel.removeClass('disabled').addClass('active')
+
+        $('body').css('background-color', '#000539')
     })
 
     $('#dino').click(()=>{
         disabled()
 
         dino.removeClass('disabled').addClass('active')
+
+        $('body').css('background-color', '#009dff')
     })
 
 })
