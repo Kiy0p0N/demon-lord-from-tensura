@@ -1,131 +1,266 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    width: 100vw;
-    height: 100vh;
-    background-color: #1A79D1;
+    width: 100dvw;
+    min-height: 100dvh;
+
+    background-image: url('../images/octagram.png');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
     font-family: fantasy;
-    color: #fff;
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 5rem;
 }
 
 h2{
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
-p{
-    font-size: 1.2rem;
-    font-weight: 100;
-}
+header{
+    height: 100dvh;
+    width: 10dvw;
 
-.content{
-    width: 90%;
-    height: 100%;
     display: flex;
-    margin: auto;
+    align-items:center ;
+    justify-content: center;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
 }
 
-.text{
-    width: 40%;
-    height: 100%;
-    margin: auto 0;
+nav{
+    height: 60dvh;
+    width: 60px;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+
+    border-radius: 50px;
 }
 
-.images{
-    width: 60%;
-    height: 100%;
-    display: grid;
-    grid-template-rows: repeat(9, 1fr);
-    grid-template-columns: repeat(9, 1fr);
-}
+.profile{
+    width: 45px;
+    height: 45px;
 
-img{
-    width: 250px;
-    box-shadow: 1em 0.5em 1em #000;
-}
+    border-radius: 100%;
 
-.img1{
-    grid-column: -1/-4;
-    grid-row: 3/9;
-}
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
 
-.img2{
-    grid-column: -2/-6;
-    grid-row: 5/9;
-}
-
-.img3{
-    grid-column: -5/-8;
-    grid-row: 2/4;
-}
-
-footer{
-    width: 100%;
-    height: 10%;
-    display: flex;
-}
-
-button{
-    width: 12.5%;
-    height: 100%;
-    border: 0;
-    background: none;
-    transition: 0.5s;
+    transition: 0.4s;
     cursor: pointer;
 }
 
-.active{
-    display: block;
+.profile:hover{
+    transform: scale(1.1);
 }
 
-.disabled{
-    display: none;     
+#rimuru{
+    background-image: url('../images/rimuru/rimuru\ profile.jpg');
 }
 
-.maou{
+#milim{
+    background-image: url('../images/milim/milim\ profile.jpeg');
+}
+
+#guy{
+    background-image: url('../images/guy/guy\ profile.jpeg');
+}
+
+#valentine{
+    background-image: url('../images/valentine/valentine\ profile.jpeg');
+}
+
+#ramiris{
+    background-image: url('../images/ramiris/ramiris\ profile.jpeg');
+}
+
+#leon{
+    background-image: url('../images/leon/leon\ profile.jpeg');
+}
+
+#dagruel{
+    background-image: url('../images/dagruel/dagruel\ profile.jpeg');
+}
+
+#dino{
+    background-image: url('../images/dino/dino\ profile.jpeg');
+}
+
+
+
+.container{
+    width: 100dvw;
+    height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
     width: 100%;
-    height: 90%;
+    flex: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.rimuru, #rimuru:hover{
-    background-color: #1A79D1;
+.content{
+    width: 80dvw;
+    height: auto;
+    flex: 7;
+
+    display: flex;
+    align-items: center;
 }
 
-.milim, #milim:hover{
-    background-color: #ec04aa;
+.description{
+    flex: 7;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.guy, #guy:hover{
-    background-color: #ff0000;
+.description p{
+    font-size: 1.2rem;
 }
 
-.ramiris, #ramiris:hover{
-    background-color: #bb9f00;
+.image{
+    flex: 3;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.valentine, #valentine:hover{
-    background-color: #7f7f7f;
+.image img{
+    width: 300px;
 }
 
-.leon, #leon:hover{
-    background-color: #e0c900;
+.lord-demon{
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.95;
+
+    position: fixed;
+    z-index: 100;
+
+    transition: 1s;
 }
 
-.dagruel, #dagruel:hover{
-    background-color: #000539;
+.rimuru{
+    background-color: deepskyblue;
 }
 
-.dino, #dino:hover{
-    background-color: #009dff;
+.milim{
+    background-color: lightpink;
 }
 
+.guy{
+    background-color:tomato;
+}
+
+.valentine{
+    background-color:dimgray;
+}
+
+.ramiris{
+    background-color: gold;
+}
+
+.leon{
+    background-color: goldenrod;
+}
+
+.dagruel{
+    background-color:darkblue;
+}
+
+.dino{
+    background-color: cadetblue;
+}
+
+@media (max-width: 800px){
+    body{
+        background-image: url('../images/Untitled.png');
+    }
+
+    header{
+        height: 60px;
+        width: 100dvw;
+
+        display: flex;
+        align-items:center ;
+        justify-content: center;
+
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    nav{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .content{
+        width: 95dvw;
+        margin: 0 auto;
+
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .description p{
+        font-size: 1rem;
+    }
+
+    .image img{
+        width: 150px;
+    }
+}
+
+@media (max-width: 500px){
+    body{
+        background-image: url('../images/octagram\ \(1\).png');
+    }
+
+    .description p{
+        font-weight: 300;
+        font-size: 0.8rem;
+    }
+}
