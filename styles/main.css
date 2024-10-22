@@ -8,12 +8,13 @@ body{
     width: 100dvw;
     min-height: 100dvh;
 
-    background-image: url('../images/octagram.png');
-    background-size: 100%;
+    background-color: #e8e0c9;
+    background-image: url('../images/demon-lords.jpg');
+    background-size: 65%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center;
-    font-family: fantasy;
+    background-position:bottom;
+    font-family: fantasy, sans-serif;
 }
 
 h1{
@@ -204,7 +205,8 @@ nav{
 
 @media (max-width: 800px){
     body{
-        background-image: url('../images/Untitled.png');
+        background-image: url('../images/demon-lords.jpg');
+        background-size: 100%;
     }
 
     header{
@@ -237,6 +239,10 @@ nav{
         font-size: 2rem;
     }
 
+    .container{
+        padding-top: 70px;
+    }
+
     .content{
         width: 95dvw;
         margin: 0 auto;
@@ -246,17 +252,17 @@ nav{
     }
 
     .description p{
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .image img{
-        width: 150px;
+        width: 250px;
     }
 }
 
 @media (max-width: 500px){
     body{
-        background-image: url('../images/octagram\ \(1\).png');
+        background-image: url('../images/demon-lords.jpg');
     }
 
     .description p{

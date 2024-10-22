@@ -1,5 +1,10 @@
 $(document).ready(()=>{
 
+    // Objetos que armazenam dados referentes aos personagens Lordes Demônios:
+    // - 'title_h1': contém os nomes principais dos personagens para o título (h1).
+    // - 'subtitle_h2': contém os subtítulos descritivos para o título secundário (h2).
+    // - 'description': contém descrições detalhadas de cada personagem, incluindo história e personalidade.
+    // - 'image': contém os caminhos das imagens associadas a cada personagem.
     const title_h1 = {
         rimuru: 'Rimuru Tempest',
         milim: 'Milim Nava',
@@ -59,7 +64,7 @@ $(document).ready(()=>{
     }
 
     
-
+    // Seleciona os elementos principais do DOM que serão manipulados
     const container = $('.container');
     const h1 = $('.title h1');
     const h2 = $('.title h2');
@@ -67,28 +72,30 @@ $(document).ready(()=>{
     const img = $('.image img');
 
 
-
-    $('.profile').hover(function(){
-        const divId = this.id;
-
-        $('#' + divId).mouseenter(()=>{
+    // Seleciona todos os elementos com a classe 'profile' e percorre cada um deles
+    $('.profile').each(function() {
+        const divId = this.id;  // Armazena o ID do elemento atual (referente a cada '.profile')
+    
+        // Quando o mouse entra no elemento
+        $(this).mouseenter(() => {
             container.addClass('lord-demon');
             container.addClass(divId);
-
+    
             h1.text(title_h1[divId]);
             h2.text(subtitle_h2[divId]);
             p.text(description[divId]);
-            img.attr('src', image[divId])
-
-        }).mouseleave(()=>{
+            img.attr('src', image[divId]);
+    
+        // Quando o mouse sai do elemento
+        }).mouseleave(() => {
             container.removeClass(divId);
             container.removeClass('lord-demon');
-
-            h1.text('Octagrama');
-            h2.text('Lordes Demônios das Oito Estrelas');
+    
+            h1.text('');
+            h2.text('');
             p.text('');
             img.attr('src', '');
-
-        })
+        });
     });
+    
 })
