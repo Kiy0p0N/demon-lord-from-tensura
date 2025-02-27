@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eight Demon Starlords: Octagram</title>
+
+    <!-- Preloading Google Fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Bungee+Tint&family=Kalnia+Glaze:wght@100..700&display=swap" rel="stylesheet">
+
+    <!-- Linking external CSS files for styles -->
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <main class="main-container">
+        <div class="main__content">
+            <!-- Displaying the demon's name and title dynamically -->
+            <h1><%= demon.name %></h1>
+            <h2><%= demon.title %></h2>
+
+            <hr>
+
+            <!-- Displaying the demon's image -->
+            <img src=<%= demon.image %> alt="">
+
+            <hr>
+
+            <!-- Displaying the demon's species -->
+            <h3>Espécie:</h3>
+            <p><%= demon.specie %></p>
+
+            <hr>
+
+            <!-- Displaying the demon's appearance details -->
+            <h3>Aparência:</h3>
+            <p><%= demon.appearance %></p>
+        </div>
+
+        <!-- Button to navigate to the previous demon -->
+        <form action="/previous/<%= demon.id %>" method="get" class="previous-button">
+            <button type="submit">
+                <img src="/image/arrow_back.svg" alt="">
+            </button>
+        </form>
+
+        <!-- Button to navigate to the next demon -->
+        <form action="/next/<%= demon.id %>" method="get" class="next-button">
+            <button type="submit">
+                <img src="/image/arrow_forward.svg" alt="">
+            </button>
+        </form>
+    </main>
+</body>
+</html>

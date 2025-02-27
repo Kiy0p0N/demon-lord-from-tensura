@@ -1,0 +1,96 @@
+body{
+    width: 100dvw;
+    min-height: 100dvh;
+
+    background: url('/image/Octagram_Manga.png'), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    font-family: 'Almendra Sc', sans-serif;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+p{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+hr{
+    width: 100%;
+    border: 2px solid gainsboro;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__content{
+    grid-column: 2/3;
+    width: 400px;
+    height: 500px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 10px black;
+    overflow-y: auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main__content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.main__content img{
+    border-radius: 10px;
+    transform: rotate(10deg);
+}
+
+form{
+    padding: 40px;
+    align-content: center;
+    position: fixed;
+}
+
+.previous-button{
+    left: 0;
+}
+
+.next-button{
+    right: 0;
+}
+
+form button{
+    padding: 20px;
+    border-radius: 40px;
+    background-color: white;
+    transition: 1s;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+form button:hover{
+    transform: rotate(-360deg);
+}
