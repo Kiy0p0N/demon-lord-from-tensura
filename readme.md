@@ -1,6 +1,6 @@
 # Lordes Demônios - That Time I Got Reincarnated as a Slime
 
-![Imagem do Projeto](/image/image.png)
+![Imagem do Projeto](/image/example.gif)
 
 ## Descrição
 

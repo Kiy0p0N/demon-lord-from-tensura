@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eight Demon Starlords: Octagram</title>
+    <link rel="shortcut icon" href="/image/icon/favicon.svg" type="image/x-icon">
 
     <!-- Preloading Google Fonts for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Bungee+Tint&family=Kalnia+Glaze:wght@100..700&display=swap" rel="stylesheet">
 
     <!-- Linking external CSS files for styles -->
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="/style/main.css">
 </head>
 <body>
     <main class="main-container">
@@ -24,7 +25,7 @@
             <hr>
 
             <!-- Displaying the demon's image -->
-            <img src=<%= demon.image %> alt="">
+            <img src=<%= demon.image %> alt="Demon Lord <%= demon.name %>">
 
             <hr>
 
@@ -40,18 +41,14 @@
         </div>
 
         <!-- Button to navigate to the previous demon -->
-        <form action="/previous/<%= demon.id %>" method="get" class="previous-button">
-            <button type="submit">
-                <img src="/image/arrow_back.svg" alt="">
-            </button>
-        </form>
+         <a href="/previous/<%= demon.id %>" class="previous-button">
+            <img src="/image/icon/arrow_back.svg" alt="Arrow back">
+         </a>
 
         <!-- Button to navigate to the next demon -->
-        <form action="/next/<%= demon.id %>" method="get" class="next-button">
-            <button type="submit">
-                <img src="/image/arrow_forward.svg" alt="">
-            </button>
-        </form>
+         <a href="/next/<%= demon.id %>" class="next-button">
+            <img src="/image/icon/arrow_forward.svg" alt="Arrow forward">
+         </a>
     </main>
 </body>
 </html>

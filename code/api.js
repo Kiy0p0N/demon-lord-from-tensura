@@ -7,7 +7,7 @@ const port = 4000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-const IMG_PATH = '/image';  // Path for storing image references
+const IMG_PATH = '/image/lord-demon';  // Path for storing image references
 
 // List of Demon Lords with their details
 const DEMON_LORDS = [
