@@ -11,15 +11,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));  // Serve static files from 'public' directory
 
+let demonLord;
+
 // Route to fetch a random demon and render it in the index view
 app.get('/', async (req, res) => {
-    try {
-        const response = await axios.get(`${URL_API}/random`);
+    if (!demonLord) {
+        try {
+            const response = await axios.get(`${URL_API}/random`);
+            demonLord = response.data;
+            res.render('index.ejs', {
+                demon: demonLord  // Pass the demon data to the view
+            });
+            demonLord = null;
+        } catch (error) {
+            console.log(error.status);
+            res.status(500).send("Error retrieving data.");
+        }
+    } else {
         res.render('index.ejs', {
-            demon: response.data  // Pass the demon data to the view
+            demon: demonLord,
         });
-    } catch (error) {
-        console.log(error.status);
+        demonLord = null;
     }
 });
 
@@ -27,9 +39,8 @@ app.get('/', async (req, res) => {
 app.get('/next/:id', async (req, res) => {
     try {
         const response = await axios.get(`${URL_API}/next/${req.params.id}`);
-        res.render('index.ejs', { 
-            demon: response.data  // Pass the demon data to the view
-        });
+        demonLord = response.data;
+        res.redirect("/");
     } catch (error) {
         console.log(error);
         res.status(500).send("Error retrieving data.");
@@ -40,11 +51,11 @@ app.get('/next/:id', async (req, res) => {
 app.get('/previous/:id', async (req, res) => {
     try {
         const response = await axios.get(`${URL_API}/previous/${req.params.id}`);
-        res.render('index.ejs', { 
-            demon: response.data  // Pass the demon data to the view
-        });
+        demonLord = response.data;
+        res.redirect("/");
     } catch (error) {
         console.log(error.status);
+        res.status(500).send("Error retrieving data.");
     }
 });
 

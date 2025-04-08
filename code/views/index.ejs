@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eight Demon Starlords: Octagram</title>
-    <link rel="shortcut icon" href="/image/icon/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/image/icon/favicon.ico" type="image/x-icon">
 
     <!-- Preloading Google Fonts for better performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,12 +41,12 @@
         </div>
 
         <!-- Button to navigate to the previous demon -->
-         <a href="/previous/<%= demon.id %>" class="previous-button">
+         <a href="/previous/<%= demon.id %>" id="previous-button">
             <img src="/image/icon/arrow_back.svg" alt="Arrow back">
          </a>
 
         <!-- Button to navigate to the next demon -->
-         <a href="/next/<%= demon.id %>" class="next-button">
+         <a href="/next/<%= demon.id %>" id="next-button">
             <img src="/image/icon/arrow_forward.svg" alt="Arrow forward">
          </a>
     </main>

@@ -69,17 +69,11 @@ hr{
     transform: rotate(10deg);
 }
 
-form{
-    padding: 40px;
-    align-content: center;
-    position: fixed;
-}
-
-.previous-button{
+#previous-button{
     left: 30px;
 }
 
-.next-button{
+#next-button{
     right: 30px;
 }
 
@@ -92,6 +86,10 @@ a{
     position: fixed;
 }
 
-a:hover{
+#previous-button:hover{
     transform: rotate(-360deg);
+}
+
+#next-button:hover{
+    transform: rotate(360deg);
 }
